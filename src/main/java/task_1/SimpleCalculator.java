@@ -16,8 +16,7 @@ public class SimpleCalculator {
 
     public double divide(int a, int b){
         if (b == 0){
-            System.out.println("Помилка! Ділення на нуль!");
-            return 0;
+            throw new ArithmeticException("Помилка! Ділення на нуль!");
         } else {
             return a / b;
         }
