@@ -3,19 +3,21 @@ package task_4;
 public class University {
 
     public static void main(String[] args){
+        // Створюємо студентів - клас Student
         Student student1 = new Student("Joe", 20, 99, 75, 40, 61, 80);
         Student student2 = new Student("Mary", 21, 89, 95, 65, 87);
         Student student3 = new Student("Gary", 19, 45, 99, 99, 100, 78);
 
+        // Створюємо новий аналізатор оцінок - клас GradeAnalyzer
         GradeAnalyzer analyzer = new GradeAnalyzer();
 
-        System.out.println("Статистика для " + student1.name + ":");
-        System.out.println("Середній бал: " + analyzer.getAverage(student1));
-        System.out.println("Найвища оцінка: " + analyzer.getHighestGrade(student1));
-        System.out.println("Найнижча оцінка: " + analyzer.getLowestGrade(student1));
-        System.out.println("Кількість прохідних балів: " + analyzer.countPassingGrades(student1));
+        System.out.println("Статистика для " + student1.name + ":"); // Виводимо ім'я студента
+        System.out.println("Середній бал: " + analyzer.getAverage(student1)); // Викликаємо метод getAverage з класу GradeAnalyzer
+        System.out.println("Найвища оцінка: " + analyzer.getHighestGrade(student1)); // Викликаємо метод getHighestGrade з класу GradeAnalyzer
+        System.out.println("Найнижча оцінка: " + analyzer.getLowestGrade(student1)); // Викликаємо метод getLowestGrade з класу getLowestGrade
+        System.out.println("Кількість прохідних балів: " + analyzer.countPassingGrades(student1)); // Викликаємо метод countPassingGrades з класу GradeAnalyzer
         System.out.print("Усі оцінки: ");
-        analyzer.printAllGrades(student1);
+        analyzer.printAllGrades(student1); // Викликаємо метод printAllGrades з класу GradeAnalyzer
 
         System.out.println();
         System.out.println("---------------------------------------");
