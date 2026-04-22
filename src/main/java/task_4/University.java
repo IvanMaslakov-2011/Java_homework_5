@@ -1,5 +1,7 @@
 package task_4;
 
+import java.util.ArrayList;
+
 public class University {
 
     public static void main(String[] args){
@@ -7,6 +9,7 @@ public class University {
         Student student1 = new Student("Joe", 20, 99, 75, 40, 61, 80);
         Student student2 = new Student("Mary", 21, 89, 95, 65, 87);
         Student student3 = new Student("Gary", 19, 45, 99, 99, 100, 78);
+
 
         // Створюємо новий аналізатор оцінок - клас GradeAnalyzer
         GradeAnalyzer analyzer = new GradeAnalyzer();
@@ -39,7 +42,21 @@ public class University {
         System.out.print("Усі оцінки: ");
         analyzer.printAllGrades(student3);
 
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(student1);
+        students.add(student2);
+        students.add(student3);
 
+
+        Student topStudent = students.get(0);
+
+        for (Student currentStudent : students){
+            if (analyzer.getAverage(currentStudent) > analyzer.getAverage(topStudent)){
+                topStudent = currentStudent;
+            }
+        }
+
+        System.out.println("Найвищий середній бал у " + topStudent + ". Він становить: " + analyzer.getAverage(topStudent));
 
     }
 }
