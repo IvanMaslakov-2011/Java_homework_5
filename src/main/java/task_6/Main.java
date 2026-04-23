@@ -9,7 +9,10 @@ public class Main {
         User quest = new User("guest1", "145156118fr", User.Role.guest, true);
         User user2 = new User("Mary", "w3en4undnbt5u9", User.Role.user, false);
 
+        // Створюємо новий об'єкт - клас AuthService
         AuthService authService1 = new AuthService();
+
+        // Перевіряємо користувачів на доступ - клас AuthService
         try {
             authService1.hasAccess(user1, "admin");
         } catch (IllegalStateException e){
