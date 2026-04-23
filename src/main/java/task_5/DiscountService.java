@@ -1,4 +1,4 @@
-package Task_5;
+package task_5;
 
 public class DiscountService {
     public double applyPercentageDiscount(double price, int percent){

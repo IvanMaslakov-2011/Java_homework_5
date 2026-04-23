@@ -1,4 +1,4 @@
-package Task_5;
+package task_5;
 
 public class StoreApp {
     public static void main(String[] args) {

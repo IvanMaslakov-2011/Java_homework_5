@@ -1,4 +1,4 @@
-package Task_5;
+package task_5;
 
 public class Product {
     private String name;
